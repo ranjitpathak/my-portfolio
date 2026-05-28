@@ -46,18 +46,19 @@
 
     <main class="max-w-5xl mx-auto px-6 py-12 md:py-16 space-y-24">
 
-        <!-- Section 1: Hero / About Me (Optimized Split Container for text and sketch graphic alignment) -->
+<!-- Section 1: Hero / About Me (Corrected Local Asset Folder Path) -->
         <section id="about" class="pt-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-24">
             
-            <!-- Left Side: Custom Sketch Box -->
-            <div class="md:col-span-4 flex justify-center order-1 md:order-2">
-                <div class="relative w-48 h-48 md:w-full max-w-[240px] aspect-square bg-white rounded-2xl p-3 border border-slate-200/80 shadow-sm shadow-slate-100 flex items-center justify-center overflow-hidden group hover:border-sky-300 transition-colors duration-300">
-                    <img src="assets/thor-sketch.png" alt="Ranjit - Design Sketch Reference" class="w-full h-full object-contain grayscale opacity-85 group-hover:opacity-100 transition-opacity">
+            <!-- Left Side: Custom Sketch Box (Using correct assets/ path) -->
+            <div class="md:col-span-5 flex justify-center order-1 md:order-2">
+                <div class="relative w-64 h-64 md:w-full max-w-[320px] aspect-square flex items-center justify-center transition-transform duration-300 hover:scale-105">
+                    <!-- Pointing exactly to your assets folder path inside your repository -->
+                    <img src="assets/thor-sketch.png" alt="Ranjit - Thor Design Sketch" class="w-full h-full object-contain drop-shadow-md text-slate-800">
                 </div>
             </div>
 
             <!-- Right Side: Content Bio Block -->
-            <div class="md:col-span-8 space-y-6 order-2 md:order-1 text-center md:text-left">
+            <div class="md:col-span-7 space-y-6 order-2 md:order-1 text-center md:text-left">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-100 bg-sky-50/80 text-sky-700 text-xs font-bold uppercase tracking-wider shadow-sm">
                     <i class="fa-solid fa-industry text-[11px]"></i> Production Planning & Head of Operations
                 </div>
