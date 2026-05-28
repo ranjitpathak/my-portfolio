@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranjit Kumar Pathak - Portfolio</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Local Production Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="dist/output.css">
     
+    <!-- Inter Font Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- FontAwesome CDN for bulletproof icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="text-slate-700 min-h-screen antialiased bg-gradient-to-tr from-slate-50 via-slate-100/60 to-blue-50/40 selection:bg-sky-600 selection:text-white">
 
+    <!-- Header Navigation Section (Clean and wraps properly on mobile phones) -->
     <header class="border-b border-slate-200/60 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm shadow-slate-100/40">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-0 md:h-16 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0">
             
+            <!-- Branding Label -->
             <div class="flex items-center space-x-2.5">
                 <div class="w-7 h-7 bg-sky-600 rounded-lg flex items-center justify-center text-white font-extrabold text-sm shadow-sm shadow-sky-600/30">
                     R
@@ -25,6 +30,7 @@
                 <span class="text-slate-800 font-bold uppercase tracking-wider text-xs">Ranjit Kumar Pathak</span>
             </div>
             
+            <!-- Mobile-Friendly Navigation Links -->
             <nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] md:text-xs font-bold uppercase tracking-wider text-slate-500">
                 <a href="#about" class="hover:text-sky-600 transition-colors px-2 py-1 rounded md:p-0">About Me</a>
                 <a href="#stack" class="hover:text-sky-600 transition-colors px-2 py-1 rounded md:p-0">Skills</a>
@@ -40,18 +46,32 @@
 
     <main class="max-w-5xl mx-auto px-6 py-12 md:py-16 space-y-24">
 
-        <section id="about" class="pt-4 max-w-3xl space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-100 bg-sky-50/80 text-sky-700 text-xs font-bold uppercase tracking-wider shadow-sm">
-                <i class="fa-solid fa-chart-line text-[11px]"></i> Business Analyst & Operations Analytics
+        <!-- Section 1: Hero / About Me (Optimized Split Container for text and sketch graphic alignment) -->
+        <section id="about" class="pt-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-24">
+            
+            <!-- Left Side: Custom Sketch Box -->
+            <div class="md:col-span-4 flex justify-center order-1 md:order-2">
+                <div class="relative w-48 h-48 md:w-full max-w-[240px] aspect-square bg-white rounded-2xl p-3 border border-slate-200/80 shadow-sm shadow-slate-100 flex items-center justify-center overflow-hidden group hover:border-sky-300 transition-colors duration-300">
+                    <img src="assets/thor-sketch.png" alt="Ranjit - Design Sketch Reference" class="w-full h-full object-contain grayscale opacity-85 group-hover:opacity-100 transition-opacity">
+                </div>
             </div>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                Turning messy ERP and operational data into clear business choices.
-            </h1>
-            <p class="text-base md:text-lg text-slate-600 leading-relaxed font-normal">
-                I have over 17 years of experience working closely with ERP systems, production planning (PPC), stock analysis, and management reporting. My roots started in the 2000s on the hardware side—assembling custom PCs, repairing systems, and configuring operating systems from Windows 98 to Windows 7. Today, I combine that technical comfort with analytical logic, clean systems data, and self-hosted environments to build clear dashboards that clear up factory floor bottlenecks and track production.
-            </p>
+
+            <!-- Right Side: Content Bio Block -->
+            <div class="md:col-span-8 space-y-6 order-2 md:order-1 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-100 bg-sky-50/80 text-sky-700 text-xs font-bold uppercase tracking-wider shadow-sm">
+                    <i class="fa-solid fa-industry text-[11px]"></i> Production Planning & Head of Operations
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                    Fixing factory floor problems and bottlenecks using data.
+                </h1>
+                <p class="text-base md:text-lg text-slate-600 leading-relaxed font-normal">
+                    I run production planning on the shop floor. I don't write raw code from scratch, but I have a strong understanding of how technology works and how to apply it. Having lost my right eye in 2016, I design digital layouts with a strict focus on high readability, soft contrast, and zero monitor glare—ensuring tools are practical and easy on the eyes during long shifts. I use Power Query and Power BI to analyze manufacturing data, find where things are getting stuck, and build dashboards that help teams make better scheduling decisions. I also run my own small server setup using Docker and Caddy to host internal tracking tools securely.
+                </p>
+            </div>
+
         </section>
 
+        <!-- Section 2: Tech Stack -->
         <section id="stack" class="space-y-8 scroll-mt-24">
             <div class="flex items-center space-x-3">
                 <div class="w-1 h-6 bg-sky-600 rounded-full"></div>
@@ -62,6 +82,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Data Analytics & ETL -->
                 <div class="p-6 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 space-y-4">
                     <div class="p-2.5 bg-sky-50 text-sky-600 rounded-lg w-fit shadow-sm shadow-sky-100">
                         <i class="fa-solid fa-filter text-lg"></i>
@@ -70,6 +91,7 @@
                     <p class="text-sm text-slate-500 leading-relaxed">I use Power Query to pull, sort, and transform messy or broken transactional data from ERP systems into reliable relational models.</p>
                 </div>
 
+                <!-- Card 2: Visualization -->
                 <div class="p-6 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 space-y-4">
                     <div class="p-2.5 bg-indigo-50 text-indigo-600 rounded-lg w-fit shadow-sm shadow-indigo-100">
                         <i class="fa-solid fa-chart-pie text-lg"></i>
@@ -78,6 +100,7 @@
                     <p class="text-sm text-slate-500 leading-relaxed">I design clear visual tracking reports for management to view active WIP items, stock-turn variances, and retail store performances.</p>
                 </div>
 
+                <!-- Card 3: Architecture -->
                 <div class="p-6 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 space-y-4">
                     <div class="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg w-fit shadow-sm shadow-emerald-100">
                         <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
@@ -88,6 +111,7 @@
             </div>
         </section>
 
+        <!-- Section 3: Projects -->
         <section id="projects" class="space-y-8 scroll-mt-24">
             <div class="flex items-center space-x-3">
                 <div class="w-1 h-6 bg-sky-600 rounded-full"></div>
@@ -99,6 +123,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+                <!-- Project 1: WIP Dashboard -->
                 <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
@@ -119,6 +144,7 @@
                     </div>
                 </div>
 
+                <!-- Project 2: Inventory Dashboard -->
                 <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
@@ -139,6 +165,7 @@
                     </div>
                 </div>
 
+                <!-- Project 3: PowerShell Cross-Network Search -->
                 <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
@@ -159,6 +186,7 @@
                     </div>
                 </div>
 
+                <!-- Project 4: Telephone Extension List -->
                 <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
@@ -182,6 +210,7 @@
             </div>
         </section>
 
+        <!-- Section 4: Professional Experience Timeline -->
         <section id="timeline" class="space-y-8 scroll-mt-24">
             <div class="flex items-center space-x-3">
                 <div class="w-1 h-6 bg-sky-600 rounded-full"></div>
@@ -191,8 +220,10 @@
                 </div>
             </div>
 
+            <!-- Timeline Tree Grid -->
             <div class="relative border-l border-slate-200 ml-4 pl-6 space-y-10">
                 
+                <!-- Position 1 -->
                 <div class="relative">
                     <span class="absolute -left-[31px] top-1 bg-sky-600 border-4 border-white w-4 h-4 rounded-full shadow-sm"></span>
                     <div class="bg-white border border-slate-200/80 p-5 rounded-xl shadow-sm space-y-2">
@@ -207,6 +238,7 @@
                     </div>
                 </div>
 
+                <!-- Position 2 -->
                 <div class="relative">
                     <span class="absolute -left-[31px] top-1 bg-slate-300 border-4 border-white w-4 h-4 rounded-full shadow-sm"></span>
                     <div class="bg-white border border-slate-200/80 p-5 rounded-xl shadow-sm space-y-2">
@@ -221,6 +253,7 @@
                     </div>
                 </div>
 
+                <!-- Position 3 -->
                 <div class="relative">
                     <span class="absolute -left-[31px] top-1 bg-slate-300 border-4 border-white w-4 h-4 rounded-full shadow-sm"></span>
                     <div class="bg-white border border-slate-200/80 p-5 rounded-xl shadow-sm space-y-2">
@@ -238,6 +271,7 @@
             </div>
         </section>
 
+        <!-- Section 5: Server Gateway -->
         <section id="infrastructure" class="space-y-8 scroll-mt-24">
             <div class="flex items-center space-x-3">
                 <div class="w-1 h-6 bg-sky-600 rounded-full"></div>
@@ -247,7 +281,9 @@
                 </div>
             </div>
 
+            <!-- Main Container -->
             <div class="bg-white border border-slate-200/80 rounded-2xl shadow-sm p-6 space-y-6">
+                <!-- System Header Bar -->
                 <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-5 gap-4">
                     <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-500">
                         <span class="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-lg"><i class="fa-solid fa-desktop text-slate-400"></i> Setup: local_host</span>
@@ -260,8 +296,10 @@
                     </div>
                 </div>
 
+                <!-- Grid of Telemetry Widget Blocks -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     
+                    <!-- Widget: Caddy -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Web Gateway</span>
@@ -273,6 +311,7 @@
                         </div>
                     </div>
 
+                    <!-- Widget: Docker -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Containers</span>
@@ -284,6 +323,7 @@
                         </div>
                     </div>
 
+                    <!-- Widget: Git -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Version Tracker</span>
@@ -295,6 +335,7 @@
                         </div>
                     </div>
 
+                    <!-- Widget: Data Feed -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Data Flow</span>
@@ -317,6 +358,7 @@
         <p class="tracking-wide text-slate-400/80">Project Overview Index</p>
     </footer>
 
+    <!-- Script Layer for soft UI data sync simulation -->
     <script>
         // Simulated heartbeat flicker for data pipeline check
         setInterval(() => {
