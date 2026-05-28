@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranjit Kumar Pathak - Portfolio</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    
     <!-- Local Production Compiled Tailwind CSS -->
     <link rel="stylesheet" href="dist/output.css">
     
@@ -18,10 +15,13 @@
     
     <!-- FontAwesome CDN for bulletproof icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body class="text-slate-700 min-h-screen antialiased bg-gradient-to-tr from-slate-50 via-slate-100/60 to-blue-50/40 selection:bg-sky-600 selection:text-white">
 
-    <!-- Header Navigation Section (Clean and wraps properly on mobile phones) -->
+    <!-- Header Navigation Section -->
     <header class="border-b border-slate-200/60 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm shadow-slate-100/40">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-0 md:h-16 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0">
             
@@ -49,13 +49,12 @@
 
     <main class="max-w-5xl mx-auto px-6 py-12 md:py-16 space-y-24">
 
-<!-- Section 1: Hero / About Me (Corrected Local Asset Folder Path) -->
+        <!-- Section 1: Hero / About Me -->
         <section id="about" class="pt-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-24">
             
-            <!-- Left Side: Custom Sketch Box (Using correct assets/ path) -->
+            <!-- Left Side: Custom Sketch Box -->
             <div class="md:col-span-5 flex justify-center order-1 md:order-2">
                 <div class="relative w-64 h-64 md:w-full max-w-[320px] aspect-square flex items-center justify-center transition-transform duration-300 hover:scale-105">
-                    <!-- Pointing exactly to your assets folder path inside your repository -->
                     <img src="assets/thor-sketch.png" alt="Ranjit - Thor Design Sketch" class="w-full h-full object-contain drop-shadow-md text-slate-800">
                 </div>
             </div>
@@ -86,7 +85,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1: Data Analytics & ETL -->
                 <div class="p-6 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 space-y-4">
                     <div class="p-2.5 bg-sky-50 text-sky-600 rounded-lg w-fit shadow-sm shadow-sky-100">
                         <i class="fa-solid fa-filter text-lg"></i>
@@ -95,7 +93,6 @@
                     <p class="text-sm text-slate-500 leading-relaxed">I use Power Query to pull, sort, and transform messy or broken transactional data from ERP systems into reliable relational models.</p>
                 </div>
 
-                <!-- Card 2: Visualization -->
                 <div class="p-6 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 space-y-4">
                     <div class="p-2.5 bg-indigo-50 text-indigo-600 rounded-lg w-fit shadow-sm shadow-indigo-100">
                         <i class="fa-solid fa-chart-pie text-lg"></i>
@@ -104,7 +101,6 @@
                     <p class="text-sm text-slate-500 leading-relaxed">I design clear visual tracking reports for management to view active WIP items, stock-turn variances, and retail store performances.</p>
                 </div>
 
-                <!-- Card 3: Architecture -->
                 <div class="p-6 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 space-y-4">
                     <div class="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg w-fit shadow-sm shadow-emerald-100">
                         <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
@@ -115,100 +111,110 @@
             </div>
         </section>
 
-        <!-- Section 3: Projects -->
+        <!-- Section 3: Projects (Upgraded with Case Studies & Functional Directory Widget) -->
         <section id="projects" class="space-y-8 scroll-mt-24">
             <div class="flex items-center space-x-3">
                 <div class="w-1 h-6 bg-sky-600 rounded-full"></div>
                 <div>
-                    <h2 class="text-xs font-bold uppercase tracking-widest text-sky-600">My Work</h2>
-                    <h3 class="text-xl font-bold text-slate-900">Practical applications built to handle work demands</h3>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-sky-600">Case Logs</h2>
+                    <h3 class="text-xl font-bold text-slate-900">Proven Data Interventions & Live Tools</h3>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 gap-8">
 
-                <!-- Project 1: WIP Dashboard -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="flex gap-1.5">
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-sky-50 text-sky-700 px-2 py-0.5 rounded-md border border-sky-100">Power BI</span>
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-600 px-2 py-0.5 rounded-md border border-slate-200">Power Query</span>
-                            </div>
-                            <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-slate-800 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <!-- Case Study 1: WIP Dashboard -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-bold tracking-wider uppercase bg-sky-50 text-sky-700 px-2.5 py-1 rounded-md border border-sky-100">Power BI</span>
+                            <span class="text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200">Power Query Data Modeling</span>
                         </div>
-                        <h4 class="text-lg font-bold text-slate-900">Work-in-Progress (WIP) Tracking Dashboard</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-light">
-                            Instead of relying on slow, manual logs, this system extracts daily machine records and uses Power Query to structure reporting. It charts processing slowdowns and active order lifecycles across stages.
-                        </p>
+                        <span class="text-xs font-semibold text-slate-400 font-mono">CASE // 01</span>
                     </div>
-                    <div class="mt-6 p-3 bg-emerald-50/60 border border-emerald-100 rounded-xl flex items-start space-x-2.5">
-                        <i class="fa-solid fa-arrow-trend-up text-emerald-600 mt-0.5 flex-shrink-0"></i>
-                        <p class="text-xs text-emerald-800"><span class="font-bold">Why it matters:</span> Fixes information lags between departments, giving floor coordinators a real-time view of batch stages.</p>
+                    <h4 class="text-xl font-bold text-slate-900">Work-in-Progress (WIP) Operational Tracking Pipeline</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                        <div class="space-y-1"><p class="text-xs font-extrabold uppercase tracking-wider text-slate-400">The Problem</p><p class="text-slate-600 font-light">Mismatched logs between processing departments created tracking blind spots and dispatch operational delays.</p></div>
+                        <div class="space-y-1"><p class="text-xs font-extrabold uppercase tracking-wider text-sky-600">The Solution</p><p class="text-slate-600 font-light">Built an automated ETL data structure inside Power Query to clean messy raw machine logs into a single data layout.</p></div>
+                        <div class="space-y-1"><p class="text-xs font-extrabold uppercase tracking-wider text-emerald-600">The Impact</p><p class="text-slate-600 font-light">Eliminated shift data tracking lags completely, granting warehouse floor leads a real-time tracking panel.</p></div>
                     </div>
                 </div>
 
-                <!-- Project 2: Inventory Dashboard -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="flex gap-1.5">
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-md border border-indigo-100">Power Pivot</span>
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-600 px-2 py-0.5 rounded-md border border-slate-200">DAX Modeling</span>
-                            </div>
-                            <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-slate-800 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <!-- Case Study 2: Inventory Optimization -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-bold tracking-wider uppercase bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-md border border-indigo-100">DAX Modeling</span>
+                            <span class="text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200">Power Pivot</span>
                         </div>
-                        <h4 class="text-lg font-bold text-slate-900">Dynamic Inventory Optimization Dashboard</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-light">
-                            An analytical data layout mapping inventory turns and material usage ranges using DAX data tables. It matches actual item consumption patterns against minimum safe buffer targets.
-                        </p>
+                        <span class="text-xs font-semibold text-slate-400 font-mono">CASE // 02</span>
                     </div>
-                    <div class="mt-6 p-3 bg-emerald-50/60 border border-emerald-100 rounded-xl flex items-start space-x-2.5">
-                        <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5 flex-shrink-0"></i>
-                        <p class="text-xs text-emerald-800"><span class="font-bold">Why it matters:</span> Protects the assembly tracks against materials running out unexpectedly without overloading working warehouse shelves.</p>
+                    <h4 class="text-xl font-bold text-slate-900">Dynamic Warehouse Buffer Optimization Analytics</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                        <div class="space-y-1"><p class="text-xs font-extrabold uppercase tracking-wider text-slate-400">The Problem</p><p class="text-slate-600 font-light">Excess raw inventory tied up working capital, while unexpected localized supply dropouts risked stalling lines.</p></div>
+                        <div class="space-y-1"><p class="text-xs font-extrabold uppercase tracking-wider text-sky-600">The Solution</p><p class="text-slate-600 font-light">Designed custom DAX data tables to automatically cross-reference historical usage ranges against buffer levels.</p></div>
+                        <div class="space-y-1"><p class="text-xs font-extrabold uppercase tracking-wider text-emerald-600">The Impact</p><p class="text-slate-600 font-light">Optimized materials footprint security across active lines without inflating resting warehouse shelf counts.</p></div>
                     </div>
                 </div>
 
-                <!-- Project 3: PowerShell Cross-Network Search -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="flex gap-1.5">
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-amber-50 text-amber-700 px-2 py-0.5 rounded-md border border-amber-100">PowerShell</span>
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-600 px-2 py-0.5 rounded-md border border-slate-200">Regex Logic</span>
+                <!-- Project 3 & 4 Grid: Featuring Interactive Live Directory Component -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- PowerShell Search Box -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold tracking-wider uppercase bg-amber-50 text-amber-700 px-2 py-0.5 rounded-md border border-amber-100">PowerShell Scripting</span>
+                                <span class="text-xs font-mono text-slate-400">CASE // 03</span>
                             </div>
-                            <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-slate-800 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                            <h4 class="text-lg font-bold text-slate-900">Cross-Network Aggregation Utility</h4>
+                            <p class="text-slate-500 text-sm font-light leading-relaxed">
+                                A utility designed to query multiple mapped shared server directories simultaneously using regular expressions (Regex), instantly locating batch graphics without file system menu navigation lag.
+                            </p>
                         </div>
-                        <h4 class="text-lg font-bold text-slate-900">Cross-Network Image Search Tool</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-light">
-                            A custom utility that crawls multiple mapped storage partitions at once. By evaluating file strings with Regular Expressions (Regex), it instantly bundles images into an aggregated catalog view.
-                        </p>
+                        <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl text-xs text-slate-600">
+                            <span class="font-bold text-slate-700">Operational Value:</span> Prevents plant staff from wasting hours looking inside deeply nested server folders.
+                        </div>
                     </div>
-                    <div class="mt-6 p-3 bg-emerald-50/60 border border-emerald-100 rounded-xl flex items-start space-x-2.5">
-                        <i class="fa-solid fa-clock text-emerald-600 mt-0.5 flex-shrink-0"></i>
-                        <p class="text-xs text-emerald-800"><span class="font-bold">Why it matters:</span> Prevents floor supervisors from losing valuable time digging through nested shared network directories to verify batch designs.</p>
-                    </div>
-                </div>
 
-                <!-- Project 4: Telephone Extension List -->
-                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="flex gap-1.5">
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-cyan-50 text-cyan-700 px-2 py-0.5 rounded-md border border-cyan-100">Docker App</span>
-                                <span class="text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-600 px-2 py-0.5 rounded-md border border-slate-200">Caddy Edge</span>
+                    <!-- Interactive Telephone Extension App (Fully Operational Widget) -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold tracking-wider uppercase bg-cyan-50 text-cyan-700 px-2 py-0.5 rounded-md border border-cyan-100">Live Client-Side Code</span>
+                                <span class="text-xs font-mono text-slate-400">WIDGET // 04</span>
                             </div>
-                            <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-slate-800 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                            <h4 class="text-lg font-bold text-slate-900">Internal Communication Extension Portal</h4>
+                            <p class="text-slate-500 text-sm font-light leading-relaxed">
+                                Hosted on a local Docker container to replace static paper logs. Try filtering the active line panel below in real-time:
+                            </p>
+
+                            <!-- Live Search Input Widget Inside Card -->
+                            <div class="space-y-2 pt-1">
+                                <div class="relative">
+                                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+                                    <input type="text" id="dir-search" onkeyup="filterDirectory()" placeholder="Type 'Floor', 'Store', 'IT'..." class="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none focus:border-sky-500 bg-slate-50/50 font-medium">
+                                </div>
+                                <div class="border border-slate-100 rounded-lg max-h-28 overflow-y-auto bg-white shadow-inner">
+                                    <table class="w-full text-[11px] text-left" id="dir-table">
+                                        <thead class="bg-slate-50/70 text-slate-400 sticky top-0 border-b border-slate-100 font-bold uppercase tracking-wider">
+                                            <tr><th class="px-3 py-1.5">Department</th><th class="px-3 py-1.5 text-right">Ext</th></tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
+                                            <tr><td class="px-3 py-1.5 font-semibold text-slate-700">Production Floor - Desk 1</td><td class="px-3 py-1.5 text-right font-mono text-sky-600">101</td></tr>
+                                            <tr><td class="px-3 py-1.5 font-semibold text-slate-700">Dispatch & Inventory Logistics</td><td class="px-3 py-1.5 text-right font-mono text-sky-600">104</td></tr>
+                                            <tr><td class="px-3 py-1.5 font-semibold text-slate-700">Retail Outlet Store - Mumbai</td><td class="px-3 py-1.5 text-right font-mono text-sky-600">201</td></tr>
+                                            <tr><td class="px-3 py-1.5 font-semibold text-slate-700">IT Infrastructure & Server Admin</td><td class="px-3 py-1.5 text-right font-mono text-sky-600">308</td></tr>
+                                            <tr><td class="px-3 py-1.5 font-semibold text-slate-700">Production Planning & Control</td><td class="px-3 py-1.5 text-right font-mono text-sky-600">102</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-lg font-bold text-slate-900">Centralized Telephone Extension Hub</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-light">
-                            A clean internal directory setup replacing physical papers that easily get lost or go out of date. Hosted as a container app, it lists desk stations and line points in an instantly filterable panel.
-                        </p>
                     </div>
-                    <div class="mt-6 p-3 bg-emerald-50/60 border border-emerald-100 rounded-xl flex items-start space-x-2.5">
-                        <i class="fa-solid fa-bolt text-emerald-600 mt-0.5 flex-shrink-0"></i>
-                        <p class="text-xs text-emerald-800"><span class="font-bold">Why it matters:</span> Accelerates quick, direct contact across lines when machine slowdowns or dispatch changes call for rapid team alerts.</p>
-                    </div>
+
                 </div>
 
             </div>
@@ -224,10 +230,7 @@
                 </div>
             </div>
 
-            <!-- Timeline Tree Grid -->
             <div class="relative border-l border-slate-200 ml-4 pl-6 space-y-10">
-                
-                <!-- Position 1 -->
                 <div class="relative">
                     <span class="absolute -left-[31px] top-1 bg-sky-600 border-4 border-white w-4 h-4 rounded-full shadow-sm"></span>
                     <div class="bg-white border border-slate-200/80 p-5 rounded-xl shadow-sm space-y-2">
@@ -242,7 +245,6 @@
                     </div>
                 </div>
 
-                <!-- Position 2 -->
                 <div class="relative">
                     <span class="absolute -left-[31px] top-1 bg-slate-300 border-4 border-white w-4 h-4 rounded-full shadow-sm"></span>
                     <div class="bg-white border border-slate-200/80 p-5 rounded-xl shadow-sm space-y-2">
@@ -257,7 +259,6 @@
                     </div>
                 </div>
 
-                <!-- Position 3 -->
                 <div class="relative">
                     <span class="absolute -left-[31px] top-1 bg-slate-300 border-4 border-white w-4 h-4 rounded-full shadow-sm"></span>
                     <div class="bg-white border border-slate-200/80 p-5 rounded-xl shadow-sm space-y-2">
@@ -271,86 +272,61 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Section 5: Server Gateway -->
+        <!-- Section 5: Server Gateway (Upgraded with Interactive Live Console Output) -->
         <section id="infrastructure" class="space-y-8 scroll-mt-24">
             <div class="flex items-center space-x-3">
                 <div class="w-1 h-6 bg-sky-600 rounded-full"></div>
                 <div>
                     <h2 class="text-xs font-bold uppercase tracking-widest text-sky-600">Local Setup</h2>
-                    <h3 class="text-xl font-bold text-slate-900">How I test and run tools</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Interactive Node Infrastructure Panel</h3>
                 </div>
             </div>
 
-            <!-- Main Container -->
             <div class="bg-white border border-slate-200/80 rounded-2xl shadow-sm p-6 space-y-6">
-                <!-- System Header Bar -->
-                <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-5 gap-4">
+                <!-- Clickable Interactive Header Bar -->
+                <div onclick="toggleConsoleLog()" class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-5 gap-4 cursor-pointer group select-none">
                     <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-500">
-                        <span class="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-lg"><i class="fa-solid fa-desktop text-slate-400"></i> Setup: local_host</span>
+                        <span class="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-lg group-hover:border-sky-300 transition-colors"><i class="fa-solid fa-desktop text-slate-400"></i> Click to inspect logs</span>
                         <span class="hidden sm:inline text-slate-300">|</span>
                         <span class="flex items-center gap-1.5"><i class="fa-solid fa-cube text-slate-400"></i> Linux Server OS</span>
                     </div>
-                    <div class="flex items-center space-x-2 text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200 shadow-sm shadow-emerald-100">
+                    <div class="flex items-center space-x-2 text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200 shadow-sm shadow-emerald-100 group-hover:bg-emerald-100/70 transition-colors">
                         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
-                        <span>SERVER UP & RUNNING</span>
+                        <span>SERVER UP // INSPECT</span>
                     </div>
                 </div>
 
-                <!-- Grid of Telemetry Widget Blocks -->
+                <!-- Expanded Live Console Display Area (Hidden by default, slides open via script) -->
+                <div id="console-wrapper" class="hidden border border-slate-800 bg-slate-900 text-slate-200 p-4 rounded-xl font-mono text-[11px] leading-relaxed shadow-inner space-y-1">
+                    <div class="text-slate-500 font-sans text-[10px] uppercase font-bold tracking-wider pb-1 border-b border-slate-800 mb-2">Active Container Output Logs:</div>
+                    <p class="text-emerald-400">[OK] caddy_reverse_proxy: listening securely on production port :443</p>
+                    <p class="text-emerald-400">[OK] docker_engine: container isolation running safely (4 active stacks)</p>
+                    <p class="text-emerald-400">[OK] internal_extension_hub: client asset routing tables fully cached</p>
+                    <p class="text-sky-400">[INFO] power_bi_gateway: data collection pipeline sync complete</p>
+                    <p class="text-slate-400">[IDLE] git_version_control: workspace directory clean, repository synced</p>
+                </div>
+
+                <!-- Widget Grid Blocks -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    
-                    <!-- Widget: Caddy -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Web Gateway</span>
-                            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
-                        </div>
-                        <div>
-                            <h5 class="text-xs sm:text-sm font-bold text-slate-800">Caddy Server</h5>
-                            <p class="text-[10px] text-slate-400 font-medium">Automatic Secure Routing</p>
-                        </div>
+                        <div class="flex items-center justify-between"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Web Gateway</span><div class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div></div>
+                        <div><h5 class="text-xs sm:text-sm font-bold text-slate-800">Caddy Server</h5><p class="text-[10px] text-slate-400 font-medium">Automatic Secure Routing</p></div>
                     </div>
-
-                    <!-- Widget: Docker -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Containers</span>
-                            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
-                        </div>
-                        <div>
-                            <h5 class="text-xs sm:text-sm font-bold text-slate-800">Docker Engine</h5>
-                            <p class="text-[10px] text-slate-400 font-medium">App Isolation Manager</p>
-                        </div>
+                        <div class="flex items-center justify-between"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Containers</span><div class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div></div>
+                        <div><h5 class="text-xs sm:text-sm font-bold text-slate-800">Docker Engine</h5><p class="text-[10px] text-slate-400 font-medium">App Isolation Manager</p></div>
                     </div>
-
-                    <!-- Widget: Git -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Version Tracker</span>
-                            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
-                        </div>
-                        <div>
-                            <h5 class="text-xs sm:text-sm font-bold text-slate-800">Git History</h5>
-                            <p class="text-[10px] text-slate-400 font-medium">Local Code Save Logs</p>
-                        </div>
+                        <div class="flex items-center justify-between"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Version Tracker</span><div class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div></div>
+                        <div><h5 class="text-xs sm:text-sm font-bold text-slate-800">Git History</h5><p class="text-[10px] text-slate-400 font-medium">Local Code Save Logs</p></div>
                     </div>
-
-                    <!-- Widget: Data Feed -->
                     <div class="p-4 bg-slate-50/50 rounded-xl border border-slate-100 flex flex-col justify-between h-24">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Data Flow</span>
-                            <div id="refresh-indicator" class="w-2 h-2 bg-emerald-500 rounded-full transition-colors duration-300"></div>
-                        </div>
-                        <div>
-                            <h5 class="text-xs sm:text-sm font-bold text-slate-800">Power BI Sync</h5>
-                            <p class="text-[10px] text-slate-400 font-medium">Local Refresh Line</p>
-                        </div>
+                        <div class="flex items-center justify-between"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">Data Flow</span><div id="refresh-indicator" class="w-2 h-2 bg-emerald-500 rounded-full transition-colors duration-300"></div></div>
+                        <div><h5 class="text-xs sm:text-sm font-bold text-slate-800">Power BI Sync</h5><p class="text-[10px] text-slate-400 font-medium">Local Refresh Line</p></div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -362,9 +338,39 @@
         <p class="tracking-wide text-slate-400/80">Project Overview Index</p>
     </footer>
 
-    <!-- Script Layer for soft UI data sync simulation -->
+    <!-- Script Layer for Interactive Directory and Server Console Components -->
     <script>
-        // Simulated heartbeat flicker for data pipeline check
+        // 1. Telephone Extension Directory Search Filter Logic
+        function filterDirectory() {
+            const input = document.getElementById("dir-search");
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById("dir-table");
+            const tr = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    let txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // 2. Click to Expand Server Log Console UI Toggle Logic
+        function toggleConsoleLog() {
+            const wrapper = document.getElementById("console-wrapper");
+            if (wrapper.classList.contains("hidden")) {
+                wrapper.classList.remove("hidden");
+            } else {
+                wrapper.classList.add("hidden");
+            }
+        }
+
+        // 3. Simulated heartbeat flicker for background telemetry data pipeline check
         setInterval(() => {
             const node = document.getElementById('refresh-indicator');
             if(node) {
